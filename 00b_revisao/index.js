@@ -26,6 +26,9 @@ botao.addEventListener('click', function mudarCor() {
     body.style.backgroundColor = 'rgb(' + r +',' + g +',' + b +')'
 })
 
+`rgb(${r}, ${g}, ${b})`
+geraInteiro = num => parseInt(Math.random() * num);
+
 const botao = document.getElementById('trocaCor');
 // console.log(botao)
 
