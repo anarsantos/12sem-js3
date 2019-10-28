@@ -13,61 +13,15 @@
 // [] arrow function
 // [] template string
 
-const body = document.body
-// o "document" é um objeto que tem um body como filha
-// console.log(body);
-
-body.style.backgroundColor = 'purple';
-botao.addEventListener('click', function mudarCor() {
-    // () => no lugar de "function mudarCor()"
-    const r = geraInteiro();
-    const g = geraInteiro();
-    const b = geraInteiro();
-    body.style.backgroundColor = 'rgb(' + r +',' + g +',' + b +')'
-})
-
+const body = document.body;
 const botao = document.getElementById('trocaCor');
-// console.log(botao)
 
 body.style.backgroundColor = 'purple';
-// 'rgb(  ,  ,  )'
+botao.addEventListener('click', () => {
+  const r = geraInteiro(255);
+  const g = geraInteiro(255);
+  const b = geraInteiro(255);
+  body.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')'
+});
 
-// const n = Math.random();
-// const n2 = n * 255;
-// const int = parseInt(n2);
-
-// console.log('número:', n);
-// console.log('número2:', n2);
-// console.log('int:', int);
-
-
-// console.log(intRandom)
-
-// botao.addEventListener('click', mudarCor);
-
-// function geraInteiro() {
-//     const n = parseInt(Math.random() * 255);
-//     console.log('chamou geraInteiro',n);
-//     return n;    
-// }
-// na linha abaixo tem outra alternativa
-
-geraInteiro = (num) => 
-    return parseInt(Math.random() * num);
-
-// para uma única instrução a chave é opcional, da linha 55 a 56 é uma função
-
-
-// F2 - muda o nome da const
-
-
-function mudarCor() {
-    // const intRandom = parseInt(Math.random() * 255)
-    
-
-    // console.log('entrei na função');
-    // body.style.backgroundColor = 'rgb('+intRandom+','+intRandom+','+intRandom+')'
-    
-    console.log(' + r +',' + g +',' + b +');
-    console.log(r, g, b)
-}
+geraInteiro = num => parseInt(Math.random() * num);
