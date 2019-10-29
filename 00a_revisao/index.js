@@ -41,25 +41,30 @@ btn.addEventListener('click', mudarCor);
 
 function geraInteiro() {
     const n = parseInt(Math.random() * 255);
-    console.log('chamou geraInteiro',n);
-    return n;    
+    console.log('chamou geraInteiro', n);
+    return n;
 }
 
 // F2 - muda o nome da const
 
 
 function mudarCor() {
-    // const intRandom = parseInt(Math.random() * 255)
-    const r = geraInteiro();
-    const g = geraInteiro();
-    const b = geraInteiro();
+    geraInteiro = num => parseInt(Math.random() * num);
+    const r = geraInteiro(255);
+    const g = geraInteiro(255);
+    const b = geraInteiro(255);
 
     // console.log('entrei na função');
     // body.style.backgroundColor = 'rgb('+intRandom+','+intRandom+','+intRandom+')'
-    body.style.backgroundColor = 'rgb(' + r +',' + g +',' + b +')'
-    console.log(' + r +',' + g +',' + b +');
-    console.log(r, g, b)
+    // body.style.backgroundColor = 'rgb(' + r +',' + g +',' + b +')'
+    body.style.backgroundColor = `rgb( ${r}, ${g}, ${b})`;
+    // console.log(' + r +',' + g +',' + b +');
+    // console.log(r, g, b)
 }
+
+
+
+
 
 
 
