@@ -6,38 +6,12 @@
 // [x] criar função de alterar a cor usando rgb()
 // [x] usar Math.random() e Math.floor() ou parseInt()
 
-// console.log('olar');
-// Ctrl + X para eliminar a linha em qualquer parte, não há necessidade de selecionar
-
-// const body = document.querySelector('body');
-
-// const body = document.getElementsByTagName('body');
-
-
-const body = document.body
-// o "document" é um objeto que tem um body como filha
-// console.log(body);
+const body = document.body;
+const botao = document.getElementById('trocaCor');
 
 body.style.backgroundColor = 'purple';
-
-const btn = document.getElementById('trocaCor');
-// console.log(botao)
-
-body.style.backgroundColor = 'purple';
-// 'rgb(  ,  ,  )'
-
-// const n = Math.random();
-// const n2 = n * 255;
-// const int = parseInt(n2);
-
-// console.log('número:', n);
-// console.log('número2:', n2);
-// console.log('int:', int);
-
-
-// console.log(intRandom)
-
-btn.addEventListener('click', mudarCor);
+// 'rgb(____,_____,____)'
+botao.addEventListener('click', mudaCor);
 
 function geraInteiro() {
     const n = parseInt(Math.random() * 255);
