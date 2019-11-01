@@ -1,0 +1,3 @@
+// função assíncrona
+
+lavaLouca()
